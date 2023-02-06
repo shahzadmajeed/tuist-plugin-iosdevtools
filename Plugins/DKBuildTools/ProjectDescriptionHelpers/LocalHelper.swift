@@ -1,9 +1,13 @@
-import Foundation
+import ProjectDescription
+//import ProjectAutomation
 
-public struct LocalHelper {
-    let name: String
-
-    public init(name: String) {
-        self.name = name
+public struct DependenciesHelper {
+   
+    public init() {
+        
+    }
+    
+    public func allTargets(in packageName: String) -> [String] {
+        []
     }
 }
