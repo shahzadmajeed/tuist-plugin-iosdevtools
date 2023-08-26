@@ -13,7 +13,11 @@ import ProjectAutomation
 
 
 /// Usage: Enter on command-line
-/// `swift run Graph --path path/to/tuist/manifest`
+/// `swift run Graph --manifestPath absolute_path/to/tuist/manifest`
+///  OR as a tuist task (use in Project.swift directory that is using this task plugin)
+/// `tuist grapher --manifest-path absolute_path/to/tuist/manifest`
+/// OR run via tust plugin (in Project.siwft directory that defines this plugin in its Config.swift)
+/// `tuist plugin run tuist-grapher` OR `tuist plugin run tuist-grapher --manifest-path absolute_path/to/tuist/manifest`
 
 @main
 struct Graph: AsyncParsableCommand {
@@ -24,7 +28,7 @@ struct Graph: AsyncParsableCommand {
     var version: Bool = false
     
     @Option(name: .shortAndLong, help: "Path to manifest file of a project or workspace")
-    var path: String? = nil
+    var manifestPath: String? = nil
     
     mutating func run() async throws {
         printToolVersion()
@@ -33,7 +37,7 @@ struct Graph: AsyncParsableCommand {
     }
     
     func targets() async throws {
-        let graph = try Tuist.graph(at: path)
+        let graph = try Tuist.graph(at: manifestPath)
         let targets = graph.projects.values.flatMap(\.targets)
         print("These are the current project's targets: \(targets.map(\.name).joined(separator: "\n"))")
     }
@@ -44,7 +48,7 @@ struct Graph: AsyncParsableCommand {
             "graph",
             "--verbose"
         ]
-        if let path = path {
+        if let path = manifestPath {
             arguments += ["--path", path]
         }
         try run(

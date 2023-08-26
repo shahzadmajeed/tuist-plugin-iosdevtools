@@ -20,9 +20,8 @@ import iOSDevTools
 
 // MARK: - Project
 
-// Local plugin loaded
-let helper = DependenciesHelper()
-//let remoteHelper = RemoteHelper(name: "RemotePlugin")
+let localPlugin = LocalHelper()
+let removePlugin = DependenciesHelper()
 
 
 // Creates our project using a helper function defined in ProjectDescriptionHelpers
