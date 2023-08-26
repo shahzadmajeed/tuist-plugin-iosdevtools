@@ -5,7 +5,7 @@ import PackageDescription
 import Foundation
 
 let package = Package(
-    name: "SwiftDevToolsPlugin",
+    name: "ios-dev-tools",
     platforms: [.macOS(.v11)],
     products: [
         /// In addition to the current package "SwiftDevToolsPlugin", other packages can also use following products

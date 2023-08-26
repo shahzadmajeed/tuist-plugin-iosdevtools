@@ -1,5 +1,6 @@
 import ProjectDescription
-import ProjectDescriptionHelpers
+import LocalPlugin
+import iOSDevTools
 
 /*
                 +-------------+
@@ -21,6 +22,8 @@ import ProjectDescriptionHelpers
 
 // Local plugin loaded
 let helper = DependenciesHelper()
+//let remoteHelper = RemoteHelper(name: "RemotePlugin")
+
 
 // Creates our project using a helper function defined in ProjectDescriptionHelpers
 let project = Project.app(name: "DKBuildTools",
