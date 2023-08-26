@@ -1,5 +1,5 @@
 import ProjectDescription
-import MyPlugin
+import ProjectDescriptionHelpers
 
 /*
                 +-------------+
