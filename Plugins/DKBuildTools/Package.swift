@@ -9,8 +9,8 @@ let package = Package(
     platforms: [.macOS(.v11)],
     products: [
         /// In addition to the current package "SwiftDevToolsPlugin", other packages can also use following products
-        .executable(name: "Graph", targets: ["Graph"]),
-        .executable(name: "Bootstrap", targets: ["Bootstrap"]),
+        .executable(name: "tuist-grapher", targets: ["tuist-grapher"]),
+        .executable(name: "tuist-bootstrap", targets: ["tuist-bootstrap"]),
         .plugin(name: "DocGenerator", targets: ["DocGenerator"]),
         .plugin(name: "SwiftLinter", targets: ["SwiftLinter"]),
         .plugin(name: "ExecutableArchiver", targets: ["ExecutableArchiver"]),
@@ -85,7 +85,7 @@ let package = Package(
         ),
         /// Executable Targets
         .executableTarget(
-            name: "Bootstrap",
+            name: "tuist-bootstrap",
             dependencies: [
                 .product(name: "ProjectAutomation", package: "ProjectAutomation"),
                 .product(name: "ArgumentParser", package: "swift-argument-parser"),
@@ -94,7 +94,7 @@ let package = Package(
             path: "Sources/ExecutableTargets/Tuist/Bootstrap"
         ),
         .executableTarget(
-            name: "Graph",
+            name: "tuist-grapher",
             dependencies: [
                 .product(name: "ProjectAutomation", package: "ProjectAutomation"),
                 .product(name: "ArgumentParser", package: "swift-argument-parser"),
@@ -110,8 +110,9 @@ let package = Package(
             plugins: [.plugin(name: "SourceGen")]
         ),
         .testTarget(
-            name: "BootstrapTests",
-            dependencies: ["Bootstrap"]
+            name: "tuist-bootstrap-tests",
+            dependencies: ["tuist-bootstrap"],
+            path: "Tests/tuist-bootstrap-tests"
         ),
     ]
 )
