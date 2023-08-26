@@ -13,7 +13,7 @@ import ProjectAutomation
 
 
 /// Usage: Enter on command-line
-/// `swift run Graph --manifestPath absolute_path/to/tuist/manifest`
+/// `swift run tuist-grapher --manifestPath absolute_path/to/tuist/manifest`
 ///  OR as a tuist task (use in Project.swift directory that is using this task plugin)
 /// `tuist grapher --manifest-path absolute_path/to/tuist/manifest`
 /// OR run via tust plugin (in Project.siwft directory that defines this plugin in its Config.swift)
