@@ -10,15 +10,15 @@ let package = Package(
     products: [
         /// In addition to the current package "SwiftDevToolsPlugin", other packages can also use following products
         .executable(name: "tuist-grapher", targets: ["tuist-grapher"]),
-        //.executable(name: "tuist-bootstrap", targets: ["tuist-bootstrap"]),
+        .executable(name: "tuist-bootstrap", targets: ["tuist-bootstrap"]),
         //.plugin(name: "DocGenerator", targets: ["DocGenerator"]),
         //.plugin(name: "SwiftLinter", targets: ["SwiftLinter"]),
         //.plugin(name: "ExecutableArchiver", targets: ["ExecutableArchiver"]),
         //.plugin(name: "SourceGen", targets: ["SourceGen"])
     ],
     dependencies: [
-        .package(url: "https://github.com/apple/swift-argument-parser", branch: "main"),
-        .package(url: "https://github.com/tuist/ProjectAutomation", from: Version(3, 15, 0)),
+        .package(url: "https://github.com/apple/swift-argument-parser", exact: Version(1, 2, 3)),
+        .package(url: "https://github.com/tuist/ProjectAutomation", from: Version(3, 22, 0)),
 //        .package(url: "https://github.com/apple/swift-format", exact: Version(0, 50700, 1)),
 //        .package(url: "https://github.com/SwiftGen/SwiftGen", exact: Version(6, 6, 2)),
         //.package(url: "https://github.com/apple/swift-tools-support-core", exact: Version(0, 2, 7))
@@ -84,6 +84,7 @@ let package = Package(
             ],
             path: "Sources/Plugins/BuildTool/SourceGen"
         ),
+         */
         /// Executable Targets
         .executableTarget(
             name: "tuist-bootstrap",
@@ -94,7 +95,7 @@ let package = Package(
             ],
             path: "Sources/ExecutableTargets/Tuist/Bootstrap"
         ),
-         */
+         
         .executableTarget(
             name: "tuist-grapher",
             dependencies: [

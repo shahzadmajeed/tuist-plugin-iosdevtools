@@ -13,30 +13,18 @@ import ProjectAutomation
 /// `swift run Bootstrap -n "Sportsbook" --version`
 
 @main
-struct Boot: AsyncParsableCommand {
+struct MainCommand: AsyncParsableCommand {
 
-    static let VERSION = Version(1, 0, 0)
-    
-    @Flag(name: .shortAndLong, help: "Print tool version")
-    var version: Bool = false
-    
-    @Option(name: .shortAndLong, help: "Name of tuist project")
-    var name: String
-    
-    @Flag(name: .shortAndLong, help: "Enable/disable caching")
-    var cacheEnabled: Bool = false
-    
-    @Option(help: "Caching profile")
-    var profile: String = "Development"
-    
-    mutating func run() async throws {
-        print("I am running")
-        print("name --> \(name)")
-        print("profile --> \(profile)")
-        print("cacheEnabled --> \(cacheEnabled)")
-        
-        if version {
-            print("Version --> v\(Boot.VERSION)")
-        }
-    }
+    static var configuration = CommandConfiguration(
+           commandName: "devtools",
+           abstract: "Tools that extend Tuist CLI to define developer workflows for iOS development",
+           subcommands: [
+               Fetch.self,          // fetch dependencies
+               Cache.self,          // cache targers
+               Codesign.self,       // setup code signing certificates & provisioning profiles
+               Generate.self,       // generate projects
+               Print.self           // print project structure, dependencies and other useful information
+           ],
+           defaultSubcommand: Version.self
+       )
 }
