@@ -17,6 +17,9 @@ let package = Package(
         //.plugin(name: "SourceGen", targets: ["SourceGen"])
     ],
     dependencies: [
+        .package(url: "https://github.com/Zollerboy1/SwiftCommand", exact: Version(1, 4, 0)),
+        .package(url: "https://github.com/JohnSundell/ShellOut.git", exact: Version(2, 3, 0)),
+        //.package(url: "https://github.com/JohnSundell/Files", exact: Version(4, 2, 0)),
         .package(url: "https://github.com/apple/swift-argument-parser", exact: Version(1, 2, 3)),
         .package(url: "https://github.com/tuist/ProjectAutomation", from: Version(3, 22, 0)),
 //        .package(url: "https://github.com/apple/swift-format", exact: Version(0, 50700, 1)),
@@ -89,8 +92,10 @@ let package = Package(
         .executableTarget(
             name: "tuist-bootstrap",
             dependencies: [
+                .product(name: "ShellOut", package: "ShellOut"),
                 .product(name: "ProjectAutomation", package: "ProjectAutomation"),
                 .product(name: "ArgumentParser", package: "swift-argument-parser"),
+                .product(name: "SwiftCommand", package: "SwiftCommand")
                 //.product(name: "TSCUtility", package: "swift-tools-support-core")
             ],
             path: "Sources/ExecutableTargets/Tuist/Bootstrap"

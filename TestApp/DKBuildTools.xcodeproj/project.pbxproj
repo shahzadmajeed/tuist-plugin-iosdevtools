@@ -1,0 +1,1119 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		28A18C7B846A03B6C42970A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352E04210A2D078108464B2C /* AppDelegate.swift */; };
+		320127ABE26D054118D711CC /* DKBuildToolsKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09C25A5DB3429390FCD3ED7D /* DKBuildToolsKit.framework */; };
+		3396B11F8A13829EE3CAC45C /* DKBuildToolsKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 09C25A5DB3429390FCD3ED7D /* DKBuildToolsKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3939CC2DD7EDE382AFC47C0E /* DKBuildToolsUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAA8A7ED956166F33D4ECB4 /* DKBuildToolsUI.swift */; };
+		4D41399FCFDDF77A9ABE4F5D /* DKBuildToolsUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 68E2A926D0EBEF36881DC72F /* DKBuildToolsUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		59C2B19CBCD7B182E22370AC /* DKBuildToolsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E7C478CFA75ED5C0ADCF4F /* DKBuildToolsUITests.swift */; };
+		8B87540D0912348356A177A4 /* DKBuildToolsKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8ABFC77D3DB9D6E1DB999D /* DKBuildToolsKit.swift */; };
+		9BE9FB946501EA2891C6FC4A /* DKBuildToolsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68E2A926D0EBEF36881DC72F /* DKBuildToolsUI.framework */; };
+		B342F391CB744E7CFDC733E1 /* TuistBundle+DKBuildTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE4AA4B6F6742F1DBA222BC /* TuistBundle+DKBuildTools.swift */; };
+		E46EE32BAA0B04BD14CCDC37 /* DKBuildToolsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68E2A926D0EBEF36881DC72F /* DKBuildToolsUI.framework */; };
+		EE69E96C46AE5AEA83679F9C /* AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33BE57A9E6117627D18F46A /* AppTests.swift */; };
+		F5F6D6A137C787C2629F7F01 /* DKBuildToolsKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BD40A4EFF8A1E7DA291658 /* DKBuildToolsKitTests.swift */; };
+		F809ED27C5C142DB5DA77732 /* DKBuildToolsKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09C25A5DB3429390FCD3ED7D /* DKBuildToolsKit.framework */; };
+		FDCD636D8886E1AA62D8A7D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98788748FEA675D31D8DDF8D /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		05258F02914CE119A86ACB62 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1AF531E4DFFF7EB13A37D10A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E101F4CA3E30338B386827C8;
+			remoteInfo = DKBuildToolsUI;
+		};
+		84089B54E9EEA85C79239CA2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1AF531E4DFFF7EB13A37D10A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ABCE22112978C117EAD833F2;
+			remoteInfo = DKBuildToolsKit;
+		};
+		9A49972BF27FC833C9CE0663 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1AF531E4DFFF7EB13A37D10A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8AEA03239914A2BE9BCEFD42;
+			remoteInfo = DKBuildTools;
+		};
+		F21B7AF0877A9B1DD7C6079E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1AF531E4DFFF7EB13A37D10A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ABCE22112978C117EAD833F2;
+			remoteInfo = DKBuildToolsKit;
+		};
+		F9C7124710315EEF4D89A43B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1AF531E4DFFF7EB13A37D10A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E101F4CA3E30338B386827C8;
+			remoteInfo = DKBuildToolsUI;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		49040AE6651854B48B5633DC /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		840FA71C21B00B668C32EF4A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99767C6AA164D6DA8CF82B34 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A42254383BE86597762BFA44 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE495F5F030447CF0B516FCB /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3396B11F8A13829EE3CAC45C /* DKBuildToolsKit.framework in Embed Frameworks */,
+				4D41399FCFDDF77A9ABE4F5D /* DKBuildToolsUI.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCF2B60B358CDABAAC0CF0F5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		07BD40A4EFF8A1E7DA291658 /* DKBuildToolsKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DKBuildToolsKitTests.swift; sourceTree = "<group>"; };
+		09C25A5DB3429390FCD3ED7D /* DKBuildToolsKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DKBuildToolsKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		114253B2DD69F3A9D67C1F7C /* DKBuildToolsKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DKBuildToolsKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		352E04210A2D078108464B2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3AE4AA4B6F6742F1DBA222BC /* TuistBundle+DKBuildTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+DKBuildTools.swift"; sourceTree = "<group>"; };
+		4F7BB6CF45A11DE461558585 /* DKBuildTools-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "DKBuildTools-Info.plist"; sourceTree = "<group>"; };
+		4FAA8A7ED956166F33D4ECB4 /* DKBuildToolsUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DKBuildToolsUI.swift; sourceTree = "<group>"; };
+		66CB0EC7ECCA34B8D82FF451 /* DKBuildToolsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DKBuildToolsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6880CC0FE84B8FE94104BC9A /* DKBuildToolsUITests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "DKBuildToolsUITests-Info.plist"; sourceTree = "<group>"; };
+		68E2A926D0EBEF36881DC72F /* DKBuildToolsUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DKBuildToolsUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B16C071C545BA36D5ACEF70 /* DKBuildToolsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DKBuildToolsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		98788748FEA675D31D8DDF8D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		98E7C478CFA75ED5C0ADCF4F /* DKBuildToolsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DKBuildToolsUITests.swift; sourceTree = "<group>"; };
+		9F8ABFC77D3DB9D6E1DB999D /* DKBuildToolsKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DKBuildToolsKit.swift; sourceTree = "<group>"; };
+		A1207D94ABF936A3EC245210 /* DKBuildToolsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "DKBuildToolsTests-Info.plist"; sourceTree = "<group>"; };
+		BB6E49CB614C9BD96305CC47 /* DKBuildToolsUI-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "DKBuildToolsUI-Info.plist"; sourceTree = "<group>"; };
+		E33BE57A9E6117627D18F46A /* AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTests.swift; sourceTree = "<group>"; };
+		EE33A3D99720B4C38BC91136 /* DKBuildToolsKit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "DKBuildToolsKit-Info.plist"; sourceTree = "<group>"; };
+		F6EDA6441EED59F2E2FC516E /* DKBuildTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DKBuildTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F78BA4801F717CB5CE9A9C90 /* DKBuildToolsKitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "DKBuildToolsKitTests-Info.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4253A195CA7E489224BFEF93 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B9FE308798D03703FEE60B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E46EE32BAA0B04BD14CCDC37 /* DKBuildToolsUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		626D6C0B8D2E51616D05D083 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				320127ABE26D054118D711CC /* DKBuildToolsKit.framework in Frameworks */,
+				9BE9FB946501EA2891C6FC4A /* DKBuildToolsUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6EF7577D05FD6BA3F8F94E8D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED6A2A976349A2F0B625D830 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F809ED27C5C142DB5DA77732 /* DKBuildToolsKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDB4C7675E4C55CEE8744343 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0AB672E0307D2C4655D2A8C1 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				3AE4AA4B6F6742F1DBA222BC /* TuistBundle+DKBuildTools.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		0AF6542DC73CA6E2F96C9936 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				98788748FEA675D31D8DDF8D /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		16825C945E824EFA6846939A /* Targets */ = {
+			isa = PBXGroup;
+			children = (
+				64C91DFA00254B7064F6A069 /* DKBuildTools */,
+				EDD1CE2385EED6B40C1D4A65 /* DKBuildToolsKit */,
+				89B5910A7278F4C2B20D42D9 /* DKBuildToolsUI */,
+			);
+			path = Targets;
+			sourceTree = "<group>";
+		};
+		237FA678BE0B24DDFA0B18C1 /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				7F270F0408F7F12BD16EA2B6 /* Derived */,
+				16825C945E824EFA6846939A /* Targets */,
+			);
+			name = Project;
+			sourceTree = "<group>";
+		};
+		60BD89A34C3E0CA655B067F9 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				352E04210A2D078108464B2C /* AppDelegate.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		64C91DFA00254B7064F6A069 /* DKBuildTools */ = {
+			isa = PBXGroup;
+			children = (
+				0AF6542DC73CA6E2F96C9936 /* Resources */,
+				60BD89A34C3E0CA655B067F9 /* Sources */,
+				85E7BD100FD20300D610C473 /* Tests */,
+			);
+			path = DKBuildTools;
+			sourceTree = "<group>";
+		};
+		6FA0E53327612D81ACF36BBA /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				9F8ABFC77D3DB9D6E1DB999D /* DKBuildToolsKit.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		76F4C3C30F46A2FB988C30F6 /* InfoPlists */ = {
+			isa = PBXGroup;
+			children = (
+				4F7BB6CF45A11DE461558585 /* DKBuildTools-Info.plist */,
+				EE33A3D99720B4C38BC91136 /* DKBuildToolsKit-Info.plist */,
+				F78BA4801F717CB5CE9A9C90 /* DKBuildToolsKitTests-Info.plist */,
+				A1207D94ABF936A3EC245210 /* DKBuildToolsTests-Info.plist */,
+				BB6E49CB614C9BD96305CC47 /* DKBuildToolsUI-Info.plist */,
+				6880CC0FE84B8FE94104BC9A /* DKBuildToolsUITests-Info.plist */,
+			);
+			path = InfoPlists;
+			sourceTree = "<group>";
+		};
+		7C7AC5C19C3E826748B025A0 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				07BD40A4EFF8A1E7DA291658 /* DKBuildToolsKitTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		7F270F0408F7F12BD16EA2B6 /* Derived */ = {
+			isa = PBXGroup;
+			children = (
+				76F4C3C30F46A2FB988C30F6 /* InfoPlists */,
+				0AB672E0307D2C4655D2A8C1 /* Sources */,
+			);
+			path = Derived;
+			sourceTree = "<group>";
+		};
+		82C589D8C69A37E92BA7D823 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				4FAA8A7ED956166F33D4ECB4 /* DKBuildToolsUI.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		85E7BD100FD20300D610C473 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				E33BE57A9E6117627D18F46A /* AppTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		870416546FB1437AA3001B4A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		89B5910A7278F4C2B20D42D9 /* DKBuildToolsUI */ = {
+			isa = PBXGroup;
+			children = (
+				82C589D8C69A37E92BA7D823 /* Sources */,
+				95B93760939B59630AB6B215 /* Tests */,
+			);
+			path = DKBuildToolsUI;
+			sourceTree = "<group>";
+		};
+		8F1B1E7D5A1DF25EE7B2A2DC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F6EDA6441EED59F2E2FC516E /* DKBuildTools.app */,
+				09C25A5DB3429390FCD3ED7D /* DKBuildToolsKit.framework */,
+				114253B2DD69F3A9D67C1F7C /* DKBuildToolsKitTests.xctest */,
+				66CB0EC7ECCA34B8D82FF451 /* DKBuildToolsTests.xctest */,
+				68E2A926D0EBEF36881DC72F /* DKBuildToolsUI.framework */,
+				8B16C071C545BA36D5ACEF70 /* DKBuildToolsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		918F301FEF95EDE37CE1B46F = {
+			isa = PBXGroup;
+			children = (
+				237FA678BE0B24DDFA0B18C1 /* Project */,
+				870416546FB1437AA3001B4A /* Frameworks */,
+				8F1B1E7D5A1DF25EE7B2A2DC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		95B93760939B59630AB6B215 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				98E7C478CFA75ED5C0ADCF4F /* DKBuildToolsUITests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		EDD1CE2385EED6B40C1D4A65 /* DKBuildToolsKit */ = {
+			isa = PBXGroup;
+			children = (
+				6FA0E53327612D81ACF36BBA /* Sources */,
+				7C7AC5C19C3E826748B025A0 /* Tests */,
+			);
+			path = DKBuildToolsKit;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2622C91275457E55CE4FE651 /* DKBuildToolsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E13EE186DFFABA32E74DC5CC /* Build configuration list for PBXNativeTarget "DKBuildToolsUITests" */;
+			buildPhases = (
+				2D0A2F5758C5B6ABE68733A6 /* Sources */,
+				7386E225F78D093FA7624A29 /* Resources */,
+				840FA71C21B00B668C32EF4A /* Embed Frameworks */,
+				4B9FE308798D03703FEE60B8 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				350ABA31F5EB42DE7113174B /* PBXTargetDependency */,
+			);
+			name = DKBuildToolsUITests;
+			productName = DKBuildToolsUITests;
+			productReference = 8B16C071C545BA36D5ACEF70 /* DKBuildToolsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5126A4107202B227BD2B1806 /* DKBuildToolsKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 30E17D125451509ECB7C240C /* Build configuration list for PBXNativeTarget "DKBuildToolsKitTests" */;
+			buildPhases = (
+				507BBE140425AE14E2FA83EF /* Sources */,
+				1C0B75023C3061EB0B244189 /* Resources */,
+				49040AE6651854B48B5633DC /* Embed Frameworks */,
+				ED6A2A976349A2F0B625D830 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				97A03195D3A509BA9F31FC10 /* PBXTargetDependency */,
+			);
+			name = DKBuildToolsKitTests;
+			productName = DKBuildToolsKitTests;
+			productReference = 114253B2DD69F3A9D67C1F7C /* DKBuildToolsKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5B374AA6D7AAA63C924B2A9E /* DKBuildToolsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A39CE2AEB1C6125B8E60DEDE /* Build configuration list for PBXNativeTarget "DKBuildToolsTests" */;
+			buildPhases = (
+				7FE76E0EE56F7D2B3C0876AF /* Sources */,
+				5601762CEF0347E0D6DC8F79 /* Resources */,
+				99767C6AA164D6DA8CF82B34 /* Embed Frameworks */,
+				4253A195CA7E489224BFEF93 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C3EA11FB799D0FAC51DB65BE /* PBXTargetDependency */,
+			);
+			name = DKBuildToolsTests;
+			productName = DKBuildToolsTests;
+			productReference = 66CB0EC7ECCA34B8D82FF451 /* DKBuildToolsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8AEA03239914A2BE9BCEFD42 /* DKBuildTools */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A75A9B675A61332D89428D8B /* Build configuration list for PBXNativeTarget "DKBuildTools" */;
+			buildPhases = (
+				BF8E6F679F38E1BB88D99C91 /* Sources */,
+				9AA2313387E7D4EDE6066D00 /* Resources */,
+				BE495F5F030447CF0B516FCB /* Embed Frameworks */,
+				626D6C0B8D2E51616D05D083 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				032B190068792E814B916D7F /* PBXTargetDependency */,
+				2F55EF0C671892CA4973EBF1 /* PBXTargetDependency */,
+			);
+			name = DKBuildTools;
+			productName = DKBuildTools;
+			productReference = F6EDA6441EED59F2E2FC516E /* DKBuildTools.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ABCE22112978C117EAD833F2 /* DKBuildToolsKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 555AD628C4BCEF19FED1DEEB /* Build configuration list for PBXNativeTarget "DKBuildToolsKit" */;
+			buildPhases = (
+				C5D3F8122E1A1688383099EA /* Sources */,
+				AF423CD97269994D647DB155 /* Resources */,
+				A42254383BE86597762BFA44 /* Embed Frameworks */,
+				FDB4C7675E4C55CEE8744343 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DKBuildToolsKit;
+			productName = DKBuildToolsKit;
+			productReference = 09C25A5DB3429390FCD3ED7D /* DKBuildToolsKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E101F4CA3E30338B386827C8 /* DKBuildToolsUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 212E113B7AEE0DBDED7BC7D7 /* Build configuration list for PBXNativeTarget "DKBuildToolsUI" */;
+			buildPhases = (
+				AB35A81F02C61644BD6B1945 /* Sources */,
+				5440886C76E82F3941FEA126 /* Resources */,
+				DCF2B60B358CDABAAC0CF0F5 /* Embed Frameworks */,
+				6EF7577D05FD6BA3F8F94E8D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DKBuildToolsUI;
+			productName = DKBuildToolsUI;
+			productReference = 68E2A926D0EBEF36881DC72F /* DKBuildToolsUI.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1AF531E4DFFF7EB13A37D10A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = tuist.io;
+				TargetAttributes = {
+					5B374AA6D7AAA63C924B2A9E = {
+						TestTargetID = 8AEA03239914A2BE9BCEFD42;
+					};
+				};
+			};
+			buildConfigurationList = AAEAFFB819C52A9C75276585 /* Build configuration list for PBXProject "DKBuildTools" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 918F301FEF95EDE37CE1B46F;
+			productRefGroup = 8F1B1E7D5A1DF25EE7B2A2DC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8AEA03239914A2BE9BCEFD42 /* DKBuildTools */,
+				5B374AA6D7AAA63C924B2A9E /* DKBuildToolsTests */,
+				ABCE22112978C117EAD833F2 /* DKBuildToolsKit */,
+				5126A4107202B227BD2B1806 /* DKBuildToolsKitTests */,
+				E101F4CA3E30338B386827C8 /* DKBuildToolsUI */,
+				2622C91275457E55CE4FE651 /* DKBuildToolsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1C0B75023C3061EB0B244189 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5440886C76E82F3941FEA126 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5601762CEF0347E0D6DC8F79 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7386E225F78D093FA7624A29 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AA2313387E7D4EDE6066D00 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDCD636D8886E1AA62D8A7D2 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF423CD97269994D647DB155 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2D0A2F5758C5B6ABE68733A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59C2B19CBCD7B182E22370AC /* DKBuildToolsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		507BBE140425AE14E2FA83EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5F6D6A137C787C2629F7F01 /* DKBuildToolsKitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7FE76E0EE56F7D2B3C0876AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE69E96C46AE5AEA83679F9C /* AppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB35A81F02C61644BD6B1945 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3939CC2DD7EDE382AFC47C0E /* DKBuildToolsUI.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF8E6F679F38E1BB88D99C91 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B342F391CB744E7CFDC733E1 /* TuistBundle+DKBuildTools.swift in Sources */,
+				28A18C7B846A03B6C42970A7 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5D3F8122E1A1688383099EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B87540D0912348356A177A4 /* DKBuildToolsKit.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		032B190068792E814B916D7F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DKBuildToolsKit;
+			target = ABCE22112978C117EAD833F2 /* DKBuildToolsKit */;
+			targetProxy = F21B7AF0877A9B1DD7C6079E /* PBXContainerItemProxy */;
+		};
+		2F55EF0C671892CA4973EBF1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DKBuildToolsUI;
+			target = E101F4CA3E30338B386827C8 /* DKBuildToolsUI */;
+			targetProxy = 05258F02914CE119A86ACB62 /* PBXContainerItemProxy */;
+		};
+		350ABA31F5EB42DE7113174B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DKBuildToolsUI;
+			target = E101F4CA3E30338B386827C8 /* DKBuildToolsUI */;
+			targetProxy = F9C7124710315EEF4D89A43B /* PBXContainerItemProxy */;
+		};
+		97A03195D3A509BA9F31FC10 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DKBuildToolsKit;
+			target = ABCE22112978C117EAD833F2 /* DKBuildToolsKit */;
+			targetProxy = 84089B54E9EEA85C79239CA2 /* PBXContainerItemProxy */;
+		};
+		C3EA11FB799D0FAC51DB65BE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DKBuildTools;
+			target = 8AEA03239914A2BE9BCEFD42 /* DKBuildTools */;
+			targetProxy = 9A49972BF27FC833C9CE0663 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1A54363D9A734F7F32770F8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Derived/InfoPlists/DKBuildToolsKit-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.tuist.DKBuildToolsKit;
+				PRODUCT_NAME = DKBuildToolsKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		204E8C565E42BB6C79D5B26C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Derived/InfoPlists/DKBuildToolsUI-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.tuist.DKBuildToolsUI;
+				PRODUCT_NAME = DKBuildToolsUI;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		2CE5F7B37628A5D92B7F3CA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Derived/InfoPlists/DKBuildToolsTests-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.tuist.DKBuildToolsTests;
+				PRODUCT_NAME = DKBuildToolsTests;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DKBuildTools.app/DKBuildTools";
+				TEST_TARGET_NAME = DKBuildTools;
+			};
+			name = Release;
+		};
+		409E87C2A4149B7DC47CF5C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Derived/InfoPlists/DKBuildToolsKitTests-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.tuist.DKBuildToolsKitTests;
+				PRODUCT_NAME = DKBuildToolsKitTests;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		584E3339955C755958806E8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Derived/InfoPlists/DKBuildToolsKit-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.tuist.DKBuildToolsKit;
+				PRODUCT_NAME = DKBuildToolsKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5982FE55D0F6C942213BDE55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Derived/InfoPlists/DKBuildToolsKitTests-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.tuist.DKBuildToolsKitTests;
+				PRODUCT_NAME = DKBuildToolsKitTests;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6C95B14D24E62BA898AF5509 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Derived/InfoPlists/DKBuildToolsUI-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.tuist.DKBuildToolsUI;
+				PRODUCT_NAME = DKBuildToolsUI;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7951B7E6245AE5EFDDC3D16B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		87223208DAE18FA72A6FE23E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Derived/InfoPlists/DKBuildTools-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.tuist.DKBuildTools;
+				PRODUCT_NAME = DKBuildTools;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		971D1C759E9595430A95BA8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Derived/InfoPlists/DKBuildToolsTests-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.tuist.DKBuildToolsTests;
+				PRODUCT_NAME = DKBuildToolsTests;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DKBuildTools.app/DKBuildTools";
+				TEST_TARGET_NAME = DKBuildTools;
+			};
+			name = Debug;
+		};
+		9A10259CCCF72515EC1AE4F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Derived/InfoPlists/DKBuildToolsUITests-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.tuist.DKBuildToolsUITests;
+				PRODUCT_NAME = DKBuildToolsUITests;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D049BD3609CAD696D3BD999C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EAA4D775226B2EC0553A3313 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Derived/InfoPlists/DKBuildTools-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.tuist.DKBuildTools;
+				PRODUCT_NAME = DKBuildTools;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FDD196C07263235DB1B09456 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Derived/InfoPlists/DKBuildToolsUITests-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.tuist.DKBuildToolsUITests;
+				PRODUCT_NAME = DKBuildToolsUITests;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		212E113B7AEE0DBDED7BC7D7 /* Build configuration list for PBXNativeTarget "DKBuildToolsUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C95B14D24E62BA898AF5509 /* Debug */,
+				204E8C565E42BB6C79D5B26C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		30E17D125451509ECB7C240C /* Build configuration list for PBXNativeTarget "DKBuildToolsKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5982FE55D0F6C942213BDE55 /* Debug */,
+				409E87C2A4149B7DC47CF5C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		555AD628C4BCEF19FED1DEEB /* Build configuration list for PBXNativeTarget "DKBuildToolsKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				584E3339955C755958806E8C /* Debug */,
+				1A54363D9A734F7F32770F8C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A39CE2AEB1C6125B8E60DEDE /* Build configuration list for PBXNativeTarget "DKBuildToolsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				971D1C759E9595430A95BA8E /* Debug */,
+				2CE5F7B37628A5D92B7F3CA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A75A9B675A61332D89428D8B /* Build configuration list for PBXNativeTarget "DKBuildTools" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87223208DAE18FA72A6FE23E /* Debug */,
+				EAA4D775226B2EC0553A3313 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AAEAFFB819C52A9C75276585 /* Build configuration list for PBXProject "DKBuildTools" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D049BD3609CAD696D3BD999C /* Debug */,
+				7951B7E6245AE5EFDDC3D16B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E13EE186DFFABA32E74DC5CC /* Build configuration list for PBXNativeTarget "DKBuildToolsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDD196C07263235DB1B09456 /* Debug */,
+				9A10259CCCF72515EC1AE4F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1AF531E4DFFF7EB13A37D10A /* Project object */;
+}

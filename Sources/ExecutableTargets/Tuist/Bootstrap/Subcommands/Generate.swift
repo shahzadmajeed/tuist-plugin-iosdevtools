@@ -9,7 +9,7 @@ import ArgumentParser
 
 import Foundation
 
-extension MainCommand {
+extension Bootstrap {
     
     struct Generate: AsyncParsableCommand {
         
