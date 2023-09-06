@@ -7,13 +7,14 @@
 
 import Foundation
 import ShellOut
+import Rainbow
 
 // MARK: Extensions/Workflows
 /// TODO: Move following extensions to a general purpose toolkit target
 
-public func echo(_ message: String) throws {
+public func echo(_ message: String, color: Color = .lightGreen) throws {
     /// Note: We are intentionally not using `executeShell` function because otherwise we will get stuck with a recursive calls/loop
-    print(try shellOut(to: .echo(message)))
+    print(try shellOut(to: .echo(message)).applyingCodes(color))
 }
 
 public func checkToolInstalled(_ tool: String) throws -> Bool {
@@ -130,7 +131,7 @@ public func executeShell(
     errorHandle: FileHandle? = nil
 ) throws -> String {
     let command = "\(environmentVariables.joined(separator: " ")) \(command.string)"
-    try echo("Executing Command: \(command)")
+    try echo("Executing Command: \(command)", color: .lightBlue)
     do {
         let output = try shellOut(
             to: command,

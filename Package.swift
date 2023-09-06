@@ -21,7 +21,9 @@ let package = Package(
         .package(url: "https://github.com/JohnSundell/ShellOut.git", exact: Version(2, 3, 0)),
         //.package(url: "https://github.com/JohnSundell/Files", exact: Version(4, 2, 0)),
         .package(url: "https://github.com/apple/swift-argument-parser", exact: Version(1, 2, 3)),
-        .package(url: "https://github.com/tuist/ProjectAutomation", from: Version(3, 22, 0)),
+        .package(url: "https://github.com/tuist/ProjectAutomation", exact: Version(3, 22, 0)),
+        .package(url: "https://github.com/onevcat/Rainbow", exact: Version(4, 0, 1))
+
 //        .package(url: "https://github.com/apple/swift-format", exact: Version(0, 50700, 1)),
 //        .package(url: "https://github.com/SwiftGen/SwiftGen", exact: Version(6, 6, 2)),
         //.package(url: "https://github.com/apple/swift-tools-support-core", exact: Version(0, 2, 7))
@@ -95,7 +97,8 @@ let package = Package(
                 .product(name: "ShellOut", package: "ShellOut"),
                 .product(name: "ProjectAutomation", package: "ProjectAutomation"),
                 .product(name: "ArgumentParser", package: "swift-argument-parser"),
-                .product(name: "SwiftCommand", package: "SwiftCommand")
+                .product(name: "SwiftCommand", package: "SwiftCommand"),
+                .product(name: "Rainbow", package: "Rainbow")
                 //.product(name: "TSCUtility", package: "swift-tools-support-core")
             ],
             path: "Sources/ExecutableTargets/Tuist/Bootstrap"
