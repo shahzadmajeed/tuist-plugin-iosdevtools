@@ -20,20 +20,20 @@ import Foundation
 
 @main
 struct Bootstrap: AsyncParsableCommand {
-    
-    //    static var configuration = CommandConfiguration(
-    //           commandName: "devtools",
-    //           abstract: "Tools that extend Tuist CLI to define developer workflows for iOS development",
-    //           subcommands: [
-    //               Fetch.self,          // fetch dependencies
-    //               Cache.self,          // cache targers
-    //               Codesign.self,       // setup code signing certificates & provisioning profiles
-    //               Generate.self,       // generate projects
-    //               Print.self           // print project structure, dependencies and other useful information
-    //           ],
-    //           defaultSubcommand: Version.self
-    //       )
-    
+
+//    static var configuration = CommandConfiguration(
+//           commandName: "devtools",
+//           abstract: "Tools that extend Tuist CLI to define developer workflows for iOS development",
+//           subcommands: [
+//               Fetch.self,          // fetch dependencies
+//               Cache.self,          // cache targers
+//               Codesign.self,       // setup code signing certificates & provisioning profiles
+//               Generate.self,       // generate projects
+//               Print.self           // print project structure, dependencies and other useful information
+//           ],
+//           defaultSubcommand: Version.self
+//       )
+
     
     // MARK: Project Generation
     
@@ -57,7 +57,7 @@ struct Bootstrap: AsyncParsableCommand {
     var verbose: Bool = false
     
     // MARK: Build Actions
-    
+
     @Flag(name: .shortAndLong, help: "Enable/disable caching")
     var enableCache: Bool = false
     
@@ -89,16 +89,16 @@ struct Bootstrap: AsyncParsableCommand {
     
     
     // MARK: Run Command
-    
+
     mutating func run() async throws {
         /// Check Tuist is installed
-        try await checkTuistInstalled()
+        try checkTuistInstalled()
         
         /// Setup code signing
-        //try setupForCodeSigning()
+        try setupForCodeSigning()
         
         /// Prepare Xcode project
-        try await createXcodeProject()
+        try createXcodeProject()
     }
 }
 
@@ -138,10 +138,10 @@ private extension Bootstrap {
     func createNewMasterKey(_ masterKey: String) throws {
         /// Note `\c` is appended to avoid a newline character in generated file
         try executeShell(to: .createFile(named: CONSTANTS.MASTER_KEY_FILE_PATH, contents: "\(masterKey)\\c"))
-        //        try Folder(path: CONSTANTS.TUIST_FOLDER_NAME)
-        //            .createFile(named: CONSTANTS.MASTER_KEY_FILE_NAME)
+//        try Folder(path: CONSTANTS.TUIST_FOLDER_NAME)
+//            .createFile(named: CONSTANTS.MASTER_KEY_FILE_NAME)
     }
-    
+
     func matchProvisioningProfiles() throws {
         
     }
@@ -152,8 +152,8 @@ private extension Bootstrap {
     
     func renameProvisioningProfile(current: String, new: String) throws {
         try executeShell(to: .moveFile(from: current, to: new))
-        //        let file = try File(path: current)
-        //        try file.rename(to: new)
+//        let file = try File(path: current)
+//        try file.rename(to: new)
     }
     
     func renameCodeSingingFolder() throws {
@@ -169,24 +169,24 @@ private extension Bootstrap {
     /// 2. Generate a tuist project focused Xcode project. In that case provide only provide `computedProjectPath` to `Project.swift`
     /// 3. Generate a tuist workspace based Xcode project. This will genereate and include all projects specified in `Workspace.swift` file.
     ///    ** This is useful for integration or unit testing all the apps against changes in some shared code
-    func createXcodeProject() async throws {
+    func createXcodeProject() throws {
         /// Fetch dependencies
         /// TODO: Decenteralize `Dependencies.swift` for each Project to improve fetch speed and serve project specific needs
-        try await tuistFetch(update: true, verbose: verbose, environmentVariables: [environmentVariables])
+        try tuistFetch(update: true, verbose: verbose, environmentVariables: [environmentVariables])
         
         /// Setup tuist cache. Mostly used during unit testing. Production pipelines should disable cache
         if enableCache && !cacheHit {
             try echo("Cache is enabled but it is a miss. Warming tuist cache...")
-            try await tuistCacheWarm(projectPath: computedProjectPath,
-                                     cacheProfile: cacheProfile,
-                                     verbose: verbose,
-                                     environmentVariables: [environmentVariables])
+            try tuistCacheWarm(projectPath: computedProjectPath,
+                               cacheProfile: cacheProfile,
+                               verbose: verbose,
+                               environmentVariables: [environmentVariables])
         } else {
             try echo("Cache is a hit or it is disabled. Skipping caching...")
         }
         
         /// Generate Xcode project
-        try await tuistGenerate(targets: targets,
+        try tuistGenerate(targets: targets,
                           projectPath: computedProjectPath,
                           cacheProfile: cacheProfile,
                           openInXcode: openInXcode,

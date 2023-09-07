@@ -8,7 +8,6 @@
 import Foundation
 import ShellOut
 import Rainbow
-import SwiftCommand
 
 // MARK: Extensions/Workflows
 /// TODO: Move following extensions to a general purpose toolkit target
@@ -18,47 +17,32 @@ public func echo(_ message: String, color: Color = .lightGreen) throws {
     print(try shellOut(to: .echo(message)).applyingCodes(color))
 }
 
-public func checkToolInstalled(_ tool: String) async throws -> Bool {
-    
-    let output = try await Command.findInPath(withName: "which")!
-        .addArguments(tool)
-        .output
-    
-    return !output.stdout.isEmpty && output.stdout.contains(tool)
-
-    
-    //let output = try executeShell(to: .which(tool))
-    //return !output.isEmpty && output.contains(tool)
+public func checkToolInstalled(_ tool: String) throws -> Bool {
+    let output = try executeShell(to: .which(tool))
+    return !output.isEmpty && output.contains(tool)
 }
 
-public func tuistVersion() async throws  -> String {
-    
-    let output = try await Command(executablePath: .init("/usr/local/bin/tuist"))
-        .addArguments("version")
-        .output
-    
-    return output.stdout
-    //try executeShell(to: .tuistVersion())
+public func tuistVersion() throws  -> String {
+    try executeShell(to: .tuistVersion())
 }
 
 public func installTuist() throws {
-    //try executeShell(to: .installTuistEnvironment())
+    try executeShell(to: .installTuistEnvironment())
 }
 
-public func checkTuistInstalled() async throws {
-    if try await checkToolInstalled(CONSTANTS.TOOLS.TUIST) {
-        try echo("Tuist \(try await tuistVersion()) is installed already... Skipping installation")
+public func checkTuistInstalled() throws {
+    if try checkToolInstalled(CONSTANTS.TOOLS.TUIST) {
+        try echo("Tuist \(try tuistVersion()) is installed already... Skipping installation")
     } else {
         try echo("Installing Tuist...")
         try installTuist()
-        try echo("Installed version \(try await tuistVersion())")
+        try echo("Installed version \(try tuistVersion())")
     }
 }
 
-public func tuistFetch(update: Bool, verbose: Bool, additionalArguments: [String] = [], environmentVariables: [String] = []) async throws {
-//    let command: ShellOutCommand = .tuistFetch(verbose: verbose, update: update, additionalArguments: additionalArguments)
-//    try executeShell(to: command, environmentVariables: environmentVariables)
-    try await executeShell(to: "tuist", arguments: ["fetch", "--update"])
+public func tuistFetch(update: Bool, verbose: Bool, additionalArguments: [String] = [], environmentVariables: [String] = []) throws {
+    let command: ShellOutCommand = .tuistFetch(verbose: verbose, update: update, additionalArguments: additionalArguments)
+    try executeShell(to: command, environmentVariables: environmentVariables)
 }
 
 public func tuistGenerate(targets: [String],
@@ -67,18 +51,14 @@ public func tuistGenerate(targets: [String],
                           openInXcode: Bool,
                           verbose: Bool,
                           additionalArguments: [String] = [],
-                          environmentVariables: [String] = []) async throws {
-//    let command: ShellOutCommand = .tuistGenerate(targets: targets,
-//                                                  projectPath: projectPath,
-//                                                  cacheProfile: cacheProfile,
-//                                                  verbose: verbose,
-//                                                  openInXcode: openInXcode,
-//                                                  additionalArguments: additionalArguments)
-//    try executeShell(to: command, environmentVariables: environmentVariables)
-//
-    /// SwiftCommand doesn't like spaces in each argument so we cannot combine all arguments into a single or even provide value for an
-    /// argument within same string. So, we have to split them into separate strings
-    try await executeShell(to: "tuist", arguments: ["generate", "--profile", "\(cacheProfile)", "--path", "\(projectPath!)"])
+                          environmentVariables: [String] = []) throws {
+    let command: ShellOutCommand = .tuistGenerate(targets: targets,
+                                                  projectPath: projectPath,
+                                                  cacheProfile: cacheProfile,
+                                                  verbose: verbose,
+                                                  openInXcode: openInXcode,
+                                                  additionalArguments: additionalArguments)
+    try executeShell(to: command, environmentVariables: environmentVariables)
 }
 
 public func tuistCacheWarm(targets: [String] = [],
@@ -86,7 +66,7 @@ public func tuistCacheWarm(targets: [String] = [],
                            cacheProfile: String,
                            verbose: Bool,
                            additionalArguments: [String] = [],
-                           environmentVariables: [String] = []) async throws {
+                           environmentVariables: [String] = []) throws {
     
     var arguments: [String] = ["\(CONSTANTS.TUIST_ARGS.PROFILE) \(cacheProfile)"]
     if let projectPath = projectPath {
@@ -100,14 +80,12 @@ public func tuistCacheWarm(targets: [String] = [],
     
     //try shellOut(to: "tuist \(CONSTANTS.TUIST_COMMANDS.CACHE_WARM)", arguments: arguments + additionalArguments, at: projectPath ?? ".")
     
-    //    let command: ShellOutCommand = .tuistCacheWarm(targets: targets,
-    //                                                   projectPath: projectPath,
-    //                                                   cacheProfile: cacheProfile,
-    //                                                   verbose: verbose,
-    //                                                   additionalArguments: additionalArguments)
-    //    try executeShell(to: command, environmentVariables: environmentVariables)
-    
-    try await executeShell(to: "tuist", arguments: ["cache", "warm", "--profile", "\(cacheProfile)", "--path", "\(projectPath!)"])
+    let command: ShellOutCommand = .tuistCacheWarm(targets: targets,
+                                                   projectPath: projectPath,
+                                                   cacheProfile: cacheProfile,
+                                                   verbose: verbose,
+                                                   additionalArguments: additionalArguments)
+    try executeShell(to: command, environmentVariables: environmentVariables)
 }
 
 // MARK: General Commands
@@ -144,35 +122,6 @@ public extension ShellOutCommand {
 
 @discardableResult
 public func executeShell(
-    to command: String,
-    arguments: [String] = [],
-    environmentVariables: [String] = [],
-    at path: String = ".",
-    process: Process = .init(),
-    outputHandle: FileHandle? = nil,
-    errorHandle: FileHandle? = nil
-) async throws -> String {
-    let command = "\(environmentVariables.joined(separator: " ")) \(command)"
-    try echo(
-        """
-        Executing: \(command),
-        Arguments: \(arguments),
-        Environment Vars: \(environmentVariables)
-        """,
-        color: .yellow
-    )
-    
-    let output = try await Command(executablePath: .init("/usr/local/bin/tuist"))
-        .addArguments(arguments)
-        .output
-    
-    print(output.stdout)
-    
-    return output.stdout
-}
-
-@discardableResult
-public func executeShell(
     to command: ShellOutCommand,
     arguments: [String] = [],
     environmentVariables: [String] = [],
@@ -182,7 +131,7 @@ public func executeShell(
     errorHandle: FileHandle? = nil
 ) throws -> String {
     let command = "\(environmentVariables.joined(separator: " ")) \(command.string)"
-    try echo("Executing Command: \(command)", color: .yellow)
+    try echo("Executing Command: \(command)", color: .lightBlue)
     do {
         let output = try shellOut(
             to: command,
